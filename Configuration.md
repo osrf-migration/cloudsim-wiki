@@ -1,3 +1,5 @@
+[Back to Home](Home)
+
 ## Configuration ##
 
 Clients and servers can have a `.env` file for configuration. This file is not
@@ -42,3 +44,5 @@ Cloudsim-auth needs the following keys for webtoken decoding:
 
     CLOUDSIM_AUTH_PUB_KEY=
     CLOUDSIM_AUTH_PRIV_KEY=
+
+[Proceed to Running locally](Running_locally)
