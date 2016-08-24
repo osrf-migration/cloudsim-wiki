@@ -8,26 +8,26 @@
 
 1. Install `vcs`, a tool to manage multiple repositories
 
-    sudo apt-get install python-vcstool
+        sudo apt-get install python-vcstool
 
 1. Install `nodejs` (must be version 4 and up)
 
-    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-    sudo apt install -y nodejs
+        curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+        sudo apt install -y nodejs
 
 1. Install global node modules:
 
     a. Bower, the package manager for the browser components
 
-       npm install -g bower
+           npm install -g bower
 
     b. Gulp, the web 'make'
 
-       npm install -g gulp
+           npm install -g gulp
 
     c. Polymer
 
-       npm install -g polymer-cli
+           npm install -g polymer-cli
 
 > Note: when installing npm modules, you shouldn't have to be the root user.
 > Npm installs packages locally (in the node_modules directory located besides
@@ -40,14 +40,14 @@
 
 1. Clone the master CloudSim repository:
 
-    hg clone http://bitbucket.org/osrf/cloudsim
-    cd cloudsim
+        hg clone http://bitbucket.org/osrf/cloudsim
+        cd cloudsim
 
 1. Run `build.bash` to get the sources, and create links accross projects.
 
-    bash build.bash
+        bash build.bash
 
-`build.bash` does many things, and each of them could fail.
+    `build.bash` does many things, and each of them could fail.
 
     1. The vcs import command clones all the repos, so make sure you have ssh setup
     with bitbucket and github.
