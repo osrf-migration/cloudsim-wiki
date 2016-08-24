@@ -4,7 +4,7 @@ Welcome to your the CloudSim wiki!
 
 ## Installation
 
-[Installation](/installation)
+[Installation](osrf/cloudsim/wiki/installation)
 Configuration
 Running locally
 
