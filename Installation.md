@@ -1,4 +1,4 @@
-<<toc>>
+[Back to Home](Home)
 
 ## Install dependencies ##
 
@@ -69,3 +69,5 @@ The `build.bash` script links the cloudsim packages:
 
 1. `bower_create_links` advertizes the client repositories
 1. `bower_use_links` subscribes to the server repositories
+
+[Proceed to Configuration](Configuration)
