@@ -4,7 +4,7 @@
 
 1. Install basic tools
 
-    sudo apt get install -y curl mercurial git python-pip
+        sudo apt get install -y curl mercurial git python-pip
 
 1. Install `vcs`, a tool to manage multiple repositories
 
