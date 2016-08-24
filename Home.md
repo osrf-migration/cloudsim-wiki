@@ -5,8 +5,8 @@ Welcome to your the CloudSim wiki!
 ## Installation
 
 1. [Installation](Installation)
-1. Configuration
-1. Running locally
+1. [Configuration](Configuration)
+1. [Running locally](Running_locally)
 
 ## Development
 
