@@ -4,13 +4,13 @@ Welcome to your the CloudSim wiki!
 
 ## Installation
 
-[Installation](osrf/cloudsim/wiki/installation)
-Configuration
-Running locally
+1. [Installation](osrf/cloudsim/wiki/Installation)
+1. Configuration
+1. Running locally
 
 ## Development
 
-Repository structure
-Developing the front-end
-Developing the back-end
+1. Repository structure
+1. Developing the front-end
+1. Developing the back-end
 
