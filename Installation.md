@@ -2,32 +2,32 @@
 
 ## Install dependencies ##
 
-Install basic tools
+1. Install basic tools
 
-  ` sudo apt get install -y curl mercurial git python-pip`
+    sudo apt get install -y curl mercurial git python-pip
 
-Install vcs, a tool to manage multiple repositories
+1. Install `vcs`, a tool to manage multiple repositories
 
-   `sudo apt-get install python-vcstool`
+    sudo apt-get install python-vcstool
 
-Install nodejs (must be version 4 and up)
+1. Install `nodejs` (must be version 4 and up)
 
     curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     sudo apt install -y nodejs
 
-Install global node modules:
+1. Install global node modules:
 
-Bower, the package manager for the browser components
+    a. Bower, the package manager for the browser components
 
-   `npm install -g bower`
+       npm install -g bower
 
-Gulp, the web 'make'
+    b. Gulp, the web 'make'
 
-   `npm install -g gulp`
+       npm install -g gulp
 
-Polymer
+    c. Polymer
 
-   `npm install -g polymer-cli`
+       npm install -g polymer-cli
 
 > Note: when installing npm modules, you shouldn't have to be the root user.
 > Npm installs packages locally (in the node_modules directory located besides
@@ -35,22 +35,28 @@ Polymer
 > it can happen that npm fails because it wants to write in /usr/bin or somewhere.
 > For those cases, you should use sudo.
 
+
 ## Get and link cloudsim source code ##
 
-Run `build.bash` to get the sources, and create links accross projects.
+1. Clone the master CloudSim repository:
+
+    hg clone http://bitbucket.org/osrf/cloudsim
+    cd cloudsim
+
+1. Run `build.bash` to get the sources, and create links accross projects.
 
     bash build.bash
 
-`build.bash` does many things, and they could fail.
+`build.bash` does many things, and each of them could fail.
 
-1. The vcs import command clones all the repos, so make sure you have ssh setup
-with bitbucket and github.
+    1. The vcs import command clones all the repos, so make sure you have ssh setup
+    with bitbucket and github.
 
-1. The `create link` and `use link` scripts allow you to modify code in the repos
-instead of "installing" the components. For example, if you type:
-`ls -l cloudsim-widgets/app/bower_components/`
-You should notice that gz-token is a link to the `gz-token` repo. This is explained
-below:
+    1. The `create link` and `use link` scripts allow you to modify code in the repos
+    instead of "installing" the components. For example, if you type:
+    `ls -l cloudsim-widgets/app/bower_components/`
+    You should notice that gz-token is a link to the `gz-token` repo. This is explained
+    below:
 
 ### Projects and links explained ###
 
