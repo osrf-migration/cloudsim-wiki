@@ -7,7 +7,8 @@ under source control.
 
 ### Cloudsim-grant ###
 
-No config necesary, but you can use it to generate authentication keys for the
+No config necesary, because it's a component. 
+However you can use it from the command line to generate authentication keys for the
 authentication server:
 
     $node
