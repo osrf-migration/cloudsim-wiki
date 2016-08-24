@@ -1,3 +1,5 @@
+<<toc>>
+
 ## Install dependencies ##
 
 Install basic tools
