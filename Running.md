@@ -8,6 +8,9 @@ To have the whole Cloudsim app running, we need to launch 3 servers:
 * Portal
 * Widgets
 
+If you're planning on using the live auth and portal servers, skip to
+`Cloudsim-widgets`.
+
 ## Cloudsim-auth ##
 
 The first server to be launched is `cloudsim-auth`. Both the other servers
