@@ -72,4 +72,4 @@ The `build.bash` script links the cloudsim packages:
 be used by others.
 1. `bower_use_links` and `npm_use_links` create the symlinks.
 
-[Proceed to Configuration](Configuration)
+[Proceed to Running](Running)
