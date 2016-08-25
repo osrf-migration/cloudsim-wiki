@@ -42,6 +42,11 @@ And in the case of the keys above, copy this into the file:
     CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
     CLOUDSIM_AUTH_PRIV_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIBOQIBAAJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaKeD4bZ5So0RmyXSiMa/AK\nJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQUCQG3+vuMvFNaSivw9yuKVvdfm\nnWHXNXhuxpgV7HbtdBSNhF+wAAJ79iCXA82TeotISHxvDs5glrFOXJG69SQLjM0C\nIQDFM4+P44uIgaoAtWbcjAcdokC4IJ8b36yuTlBIij1RtQIhALJ9YNwJY6udsxXA\nGKceRqRgcAENewuGUmmA7E1+eIwBAiEAncLZP+k8bTSIAJEfFtZsF7UAk01MFkyK\nJQtzbTtkQV0CIQCOyrPjOrYi5I9Ema1Sfp7p5sAA15Wi0duHmlakZS08zQIgaU8T\n2vgd3YoM4k0wiCVxgIDY2qA7ZOWDFtNF8pEkQqE=\n-----END RSA PRIVATE KEY-----
 
+It's also possible to choose which port the server will be listening on. Let's add the
+following to `.env` so the auth server is on port 8000:
+
+    CLOUDSIM_PORT=8000
+
 ### Running ###
 
 To run the server, simply run:
@@ -49,15 +54,19 @@ To run the server, simply run:
     cd cloudsim-auth
     gulp serve
 
-By default, the server is launched on port 4000. You can check that in the
-output of the command above there is something like:
-TODO: How to change ports?
+By default, the server is launched on port 4000, but since we specified 8000 on
+`.env`, that will be used.
 
-    listening on port 4000
+To check what port is being used, search in the output of the previous
+command for something like:
+
+    listening on port 8000
 
 Now go to your browser and open
-[https://localhost:4000](https://localhost:4000)
+[https://localhost:8000](https://localhost:8000)
 . Accept the invalid security certificate, and your server is ready to be used.
+
+> Note that you must accept the invalid certificates for every browser you use.
 
 ## Cloudsim-portal ##
 
