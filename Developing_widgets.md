@@ -205,12 +205,45 @@ When using a new component, don't forget to add it to `app/elements/elements.htm
 
 ## **Tip 7**: Modifying a `gz-` component
 
-1. You can edit the component in its directory.
-
 1. Brief overview of existing `gz-` components:
 
+`gz-` component | Used by
+------------- | -------------
+gz-accounts | cs-signuppage
+gz-cmd |
+gz-grant | cs-app, cs-sharebutton
+gz-simulationlauncher |
+gz-simulationq | cs-simulationq
+gz-simulator |
+gz-simulatorlauncher | cs-machinelauncher
+gz-simulatorq | cs-machinelist
+gz-token | cs-app
 
+1. You can edit the component in its directory.
 
+      gedit gz-componentname/gz-componentname.html
 
+1. Then make a pull request to the component's repository.
+
+1. Once merged into master, someone has to make a release through the
+[GitHub UI](https://github.com/osrf/gz-token/releases).
+
+1. For the changes to be reflected in the live app, it must be redeployed. This
+can be done by clicking on the `Restat Build` button for the latest `default`
+branch build in `cloudsim-widget`'s
+[Codeship](https://codeship.com/projects/156369) project.
 
 ## **Tip 8**: Creating a `gz-` component
+
+TODO
+
+Need instructions on how to:
+* Create a new boilerplate component
+* Generate its documentation
+* Generate its demo page
+* Setup tests
+* Setup codeship
+* Release
+* Bower install it in cloudsim-widgets
+* Import it in `cloudsim-widgets/app/elements/elements.html`
+
