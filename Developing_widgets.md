@@ -14,7 +14,7 @@ their prefix: `gz-` or `cs-`.
 
 ## gz-*
 
-The `gz-` components:
+`gz-` components:
 
 * Provide an interface to servers.
 * Are not meant to display information.
@@ -34,15 +34,16 @@ components.
 * Are specific for the cloudsim app.
 * Handle very little logic, are there mostly to display and organize information.
 * Have no direct communication with servers.
-* Are all hosted in the
-[cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/?at=default)
-repository.
+* Are all hosted in the `cloudsim-widgets` repository and never released.
+
+[Here](https://bitbucket.org/osrf/cloudsim-widgets/src/default/app/elements/)
+you can see all `cs-` components.
 
 ## gz-account + cs-signuppage example
 
 * Target server: `cloudsim-auth`
 
-* Purpose: create and remove accounts
+* Purpose: create accounts
 
 * [`gz-account`](https://github.com/osrf/gz-accounts/blob/master/gz-accounts.html)
 's role: Send REST requests to the server.
@@ -52,18 +53,21 @@ repository.
 
 * Usage:
 
-  1. Import both components in [`app/elements/elements.html`](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/elements.html?fileviewer=file-view-default):
+  1. Import both components in
+  [`app/elements/elements.html`](https://bitbucket.org/osrf/cloudsim-widgets/src/default/app/elements/elements.html?fileviewer=file-view-default)
+  . Note the different paths for `gz-` and `cs-`.
 
         <link rel="import" href="../bower_components/gz-accounts/gz-accounts.html">
         <link rel="import" href="cs-signuppage/cs-signuppage.html">
 
   1. Instantiate `gz-accounts` within `cs-signuppage`. The parameters passed in
   were the auth server's `url` and a callback for when registration is complete
-  (`on-register`).
+  (`on-register`). The `id` will be used to access the component in the
+  javascript code.
 
         <gz-accounts
           id="accounts"
-          url={{url}}
+          url=[[url]]
           on-register="onRegister"
         ></gz-accounts>
 
@@ -85,22 +89,36 @@ repository.
 
 # Development
 
-Let's walk through the process of adding a component to `cloudsim-widgets`.
-We'll be covering **the case where no changes to other servers are needed**. This
-is the case when adding static content, reorganizing existing functionality or
-adding visualization for features already exposed by the servers, but not yet
-displayed in the GUI.
+## **Tip 0**: What do you want to do
 
-## Use public servers
+* Add new static content / reorganize existing functionality
+
+    * Create a `cs-` component
+    * Edit existing `cs-` components
+
+* Add dynamic interface for features already exposed by the servers, but not
+yet displayed in the GUI.
+
+    * Create new `gz-` component which talks to the server
+    * Create new `cs-` component which uses the `gz-` component's interface
+
+* Add completely new functionality which no server is doing
+
+    * Create a new server, `gz-` and `cs-` components
+    * Add functionality to server, create new `gz-` and `cs-`
+
+Of course, most cases might require a different set of actions.
+
+## **Tip 1**: Use public servers
 
 Since our focus is on the widgets side, we don't need to worry about launching
 local auth and portal servers. So we can set our cloudsim-widgets `.env` file
-to use the public servers as explained [earlier](Running).
+to use the public servers as explained [here](Running).
 
-> When using the public server, be mindful of machines that had been launched
+> When using public servers, be mindful of machines that had been launched
 > before you started, other developers might be working on them.
 
-## Run the server
+## **Tip 2**: Run the server
 
 First move into the widgets directory:
 
@@ -108,12 +126,12 @@ First move into the widgets directory:
 
 There are two ways to run the servers:
 
-* `gulp serve`: Good for debugging, but slow.
+* `gulp serve`: Good for debugging, but slow to load. See BrowserSync below.
 
 * `gulp serve:dist`: Good for production, all the code is optimized in a process
 called "vulcanize".
 
-## BrowserSync
+## **Tip 3**: BrowserSync
 
 By default, BrowserSync is at work while the server is up. Whenever you make a
 change to the source code, the browser will refresh and you can see the results
@@ -126,10 +144,61 @@ actions to be performed twice if you accidentaly forgot another browser open.
 
 You can configure BrowserSync at [http://localhost:3001/](http://localhost:3001/).
 
-### Adding a `cs-` component
+## **Tip 4**: Modifying a `cs-` component
 
-1.
+1. All `cs-` components can be found at `cloudsim-widgets/app/elements`
 
+1. The `cs-` components are currently structured as follows:
+
+    ![Components](images/components.png)
+
+1. Edit a component
+
+1. Make a pull request to cloudsim-widgets. When merged into default, Codeship deploys
+the updated version to
+[https://cloudsim.io:5000](https://cloudsim.io:5000).
+
+## **Tip 5**: Adding a `cs-` component
+
+1. Move to the app directory:
+
+       cd cloudsim-widgets/app
+
+1. Create directory for new component:
+
+        mkdir elements/cs-componentname
+
+1. Copy template element:
+
+        cp elements/cs-template/cs-template.html elements/cs-componentname/cs-componentname.html
+
+1. Search and replace all `cs-template` with `cs-componentname` in the html file.
+
+1. Add link import for `cs-componentname` in `elements/elements.html`
+
+1. Go to the component where you want to place `cs-componentname` and insert its tag:
+
+        <cs-componentname/>
+
+1. When running the server, you'll see a button that says `template`. Tapping it
+displays a notification.
+
+1. Don't forget to add a basic loading test for your component:
+
+        cp test/cs-template-basic.html test/cs-componentname-basic.html
+        gedit test/cs-componentname-basic.html
+        # Search and replace cs-template with cs-componentname
+
+1. Make a pull request to cloudsim-widgets. When merged into default, Codeship deploys
+the updated version to
+[https://cloudsim.io:5000](https://cloudsim.io:5000).
+
+## **Tip 5**: Use official components
+
+See the catalogue of official polymer components
+[here](https://elements.polymer-project.org/browse?package=paper-elements).
+
+When using a new component, don't forget to add it to `app/elements/elements.html`.
 
 
 ## gz-XXX ##
