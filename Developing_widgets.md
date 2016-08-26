@@ -238,12 +238,20 @@ branch build in `cloudsim-widget`'s
 TODO
 
 Need instructions on how to:
+
 * Create a new boilerplate component
+
 * Generate its documentation
+
 * Generate its demo page
+
 * Setup tests
+
 * Setup codeship
+
 * Release
+
 * Bower install it in cloudsim-widgets
+
 * Import it in `cloudsim-widgets/app/elements/elements.html`
 
