@@ -221,7 +221,7 @@ When using a new component, don't forget to add it to `app/elements/elements.htm
 
 1. You can edit the component in its directory.
 
-      gedit gz-componentname/gz-componentname.html
+        gedit gz-componentname/gz-componentname.html
 
 1. Then make a pull request to the component's repository.
 
