@@ -45,7 +45,7 @@ you can see all `cs-` components.
 
 * Purpose: create accounts
 
-* [`gz-account`](https://github.com/osrf/gz-accounts/blob/master/gz-accounts.html)
+* [`gz-accounts`](https://github.com/osrf/gz-accounts/blob/master/gz-accounts.html)
 's role: Send REST requests to the server.
 
 * [`cs-signuppage`](https://bitbucket.org/osrf/cloudsim-widgets/src/default/app/elements/cs-signuppage/cs-signuppage.html)
@@ -61,7 +61,7 @@ you can see all `cs-` components.
         <link rel="import" href="cs-signuppage/cs-signuppage.html">
 
   1. Instantiate `gz-accounts` within `cs-signuppage`. The parameters passed in
-  were the auth server's `url` and a callback for when registration is complete
+  are the auth server's `url` and a callback for when registration is complete
   (`on-register`). The `id` will be used to access the component in the
   javascript code.
 
@@ -107,7 +107,8 @@ yet displayed in the GUI.
     * Create a new server, `gz-` and `cs-` components
     * Add functionality to server, create new `gz-` and `cs-`
 
-Of course, most cases might require a different set of actions.
+These are just very general guidelines. Most cases might require a different
+set of actions.
 
 ## **Tip 1**: Use public servers
 
@@ -158,17 +159,17 @@ You can configure BrowserSync at [http://localhost:3001/](http://localhost:3001/
 the updated version to
 [https://cloudsim.io:5000](https://cloudsim.io:5000).
 
-## **Tip 5**: Adding a `cs-` component
+## **Tip 5**: Creating a `cs-` component
 
 1. Move to the app directory:
 
-       cd cloudsim-widgets/app
+        cd cloudsim-widgets/app
 
 1. Create directory for new component:
 
         mkdir elements/cs-componentname
 
-1. Copy template element:
+1. Copy template component:
 
         cp elements/cs-template/cs-template.html elements/cs-componentname/cs-componentname.html
 
@@ -189,29 +190,27 @@ displays a notification.
         gedit test/cs-componentname-basic.html
         # Search and replace cs-template with cs-componentname
 
+1. The rest is polymer...
+
 1. Make a pull request to cloudsim-widgets. When merged into default, Codeship deploys
 the updated version to
 [https://cloudsim.io:5000](https://cloudsim.io:5000).
 
-## **Tip 5**: Use official components
+## **Tip 6**: Use official components
 
 See the catalogue of official polymer components
 [here](https://elements.polymer-project.org/browse?package=paper-elements).
 
 When using a new component, don't forget to add it to `app/elements/elements.html`.
 
+## **Tip 7**: Modifying a `gz-` component
 
-## gz-XXX ##
+1. You can edit the component in its directory.
 
-### Updates ###
+1. Brief overview of existing `gz-` components:
 
-* Pull request to [gz-XXX](https://github.com/osrf/?utf8=%E2%9C%93&query=gz-).
-* Once merged into default, make a new release through GitHub.
 
-### Impacted repos ###
 
-The following repos might need code updates or redeployment to take
-gz-XXX changes into account.
 
-* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
 
+## **Tip 8**: Creating a `gz-` component
