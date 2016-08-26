@@ -207,17 +207,17 @@ When using a new component, don't forget to add it to `app/elements/elements.htm
 
 1. Brief overview of existing `gz-` components:
 
-`gz-` component | Used by
-------------- | -------------
-gz-accounts | cs-signuppage
-gz-cmd |
-gz-grant | cs-app, cs-sharebutton
-gz-simulationlauncher |
-gz-simulationq | cs-simulationq
-gz-simulator |
-gz-simulatorlauncher | cs-machinelauncher
-gz-simulatorq | cs-machinelist
-gz-token | cs-app
+    `gz-` component | Used by
+    ------------- | -------------
+    gz-accounts | cs-signuppage
+    gz-cmd |
+    gz-grant | cs-app, cs-sharebutton
+    gz-simulationlauncher |
+    gz-simulationq | cs-simulationq
+    gz-simulator |
+    gz-simulatorlauncher | cs-machinelauncher
+    gz-simulatorq | cs-machinelist
+    gz-token | cs-app
 
 1. You can edit the component in its directory.
 
