@@ -14,57 +14,74 @@ their prefix: `gz-` or `cs-`.
 
 ## gz-*
 
-The `gz-` components provide an interface to servers. They are not meant to be
-used to display information, instead, they expose a clear and simple API which
-which other components can use.
+The `gz-` components:
 
-`gz-` components are general and not tied to the cloudsim app. Each component
-is hosted at its own repository and can be released separately. When released,
-any polymer user can use the component simply by referencing it in their
-`bower.json`.
+* Provide an interface to servers.
+* Are not meant to display information.
+* Expose a clear and simple API which which other components can use.
+* Are general and not tied to the cloudsim app.
+* Each component is hosted at its own repository and can be released separately.
+* When released, any polymer app can use the component simply by referencing it
+in `bower.json`. No need to clone the repo.
 
 [Here](https://github.com/osrf?utf8=%E2%9C%93&query=gz-) you can see all `gz-`
 components.
 
-### `gz-token` example
-
-* Target server: cloudsim-auth
-
-* Purpose: create and remove accounts
-
-* Usage in cloudsim-widgets:
-
-1. Import it in [`app/elements/elements.html`](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/elements.html?fileviewer=file-view-default):
-
-      <link rel="import" href="../bower_components/gz-accounts/gz-accounts.html">
-
-1. [cs-signuppage](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/cs-signuppage/cs-signuppage.html?fileviewer=file-view-default) instantiates the element:
-
-      <gz-accounts
-        id="accounts"
-        url={{url}}
-        on-register="onRegister"
-      ></gz-accounts>
-
-    The parameters passed in were the auth server's `url` and a callback for
-    when registration is complete (`on-register`).
-
-1. Now all `cs-signuppage` must do to request a new account to be created is
-calling:
-
-    this.$.accounts.registerUser(user, pass);
-
-1. And when the account has been created, `onRegister` will be called.
-
 ## cs-*
 
-`cs-` components are meant to be very specific for the cloudsim app. They handle
-very little logic, no direct server communication, and are there mostly to
-display and organize information. They are all hosted in the
+`cs-` components:
+
+* Are specific for the cloudsim app.
+* Handle very little logic, are there mostly to display and organize information.
+* Have no direct communication with servers.
+* Are all hosted in the
 [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/?at=default)
 repository.
 
-An example is the `cs-signuppage` listed above.
+## gz-account + cs-signuppage example
+
+* Target server: `cloudsim-auth`
+
+* Purpose: create and remove accounts
+
+* [`gz-account`](https://github.com/osrf/gz-accounts/blob/master/gz-accounts.html)
+'s role: Send REST requests to the server.
+
+* [`cs-signuppage`](https://bitbucket.org/osrf/cloudsim-widgets/src/default/app/elements/cs-signuppage/cs-signuppage.html)
+'s role: User interface for input and feedback.
+
+* Usage:
+
+  1. Import both components in [`app/elements/elements.html`](https://bitbucket.org/osrf/cloudsim-widgets/src/99d0846b744cb4c5932713d9dea399ffd3535d7c/app/elements/elements.html?fileviewer=file-view-default):
+
+        <link rel="import" href="../bower_components/gz-accounts/gz-accounts.html">
+        <link rel="import" href="cs-signuppage/cs-signuppage.html">
+
+  1. Instantiate `gz-accounts` within `cs-signuppage`. The parameters passed in
+  were the auth server's `url` and a callback for when registration is complete
+  (`on-register`).
+
+        <gz-accounts
+          id="accounts"
+          url={{url}}
+          on-register="onRegister"
+        ></gz-accounts>
+
+
+  1. `cs-signuppage` provides input fields for name and password:
+
+        <paper-input label="User name" id="user"></paper-input>
+        <paper-input label="Password" id="pass1" type="password"></paper-input>
+        <paper-input label="Confirm password" id="pass2" type="password"></paper-input>
+
+  1. Once the user submits, `cs-signuppage` calls `gz-accounts`'s function:
+
+        this.$.accounts.registerUser(user, pass);
+
+  1. When the account has been created, `gz-accounts` fires an event which
+  triggers the `onRegister` callback in `cs-signuppage`.
+
+  1. `cs-signuppage` fires an event so the toast notifies success or error.
 
 # Development
 
