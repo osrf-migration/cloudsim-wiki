@@ -2,21 +2,20 @@
 
 ## Cloudsim-auth ##
 
-### Updates ###
+### Depends on these Cloudsim packages:
 
-* Pull request to cloudsim-auth
+* [cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant): Uses the Javascript API.
+
+### These Cloudsim packages depend on it:
+
+* [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal): Uses auth's keys.
+* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim): Uses auth's keys.
+* [gz-token](https://github.com/osrf/gz-token): Uses the REST API.
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
+
+### How to make changes
+
+* Pull request to [cloudsim-auth](https://bitbucket.org/osrf/cloudsim-auth)
 * Once merged into default, public server is redeployed by Codeship.
 
-### Impacted repos ###
-
-The following repos might need code updates or redeployment to take
-cloudsim-auth changes into account.
-
-* [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal)
-* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
-* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
-* gz-token
-
-
-
-
+[See Cloudsim-auth's API](Interface_auth)

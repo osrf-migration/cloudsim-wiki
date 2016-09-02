@@ -1,6 +1,4 @@
-# Welcome
-
-Welcome to your the CloudSim wiki!
+# CloudSim
 
 ## Installation
 
