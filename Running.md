@@ -19,14 +19,23 @@ will use it for authentication.
 ### Configuration ###
 
 All servers need a `.env` file for configuration. This file is not
-under source control and must be created locally. The authentication server needs
-the following keys in the `.env` file for webtoken decoding:
+under source control and must be created locally. To create the `.env`
+file:
 
-    CLOUDSIM_AUTH_PUB_KEY=
-    CLOUDSIM_AUTH_PRIV_KEY=
+    cd cloudsim-auth
+    gedit .env
 
-`cloudsim-grant` provides a convenient way to generate these keys using nodejs. You
-can generate them as follows:
+Then add the following environment variables:
+
+#### Webtoken decoding
+
+Two keys are necessary for webtoken decoding:
+
+* `CLOUDSIM_AUTH_PUB_KEY`
+* `CLOUDSIM_AUTH_PRIV_KEY`
+
+`cloudsim-grant` provides a convenient way to generate these keys using
+nodejs. You can generate them as follows:
 
     node
     > const csgrant = require('cloudsim-grant')
@@ -35,20 +44,25 @@ can generate them as follows:
     { private: '-----BEGIN RSA PRIVATE KEY-----\nMIIBOQIBAAJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaKeD4bZ5So0RmyXSiMa/AK\nJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQUCQG3+vuMvFNaSivw9yuKVvdfm\nnWHXNXhuxpgV7HbtdBSNhF+wAAJ79iCXA82TeotISHxvDs5glrFOXJG69SQLjM0C\nIQDFM4+P44uIgaoAtWbcjAcdokC4IJ8b36yuTlBIij1RtQIhALJ9YNwJY6udsxXA\nGKceRqRgcAENewuGUmmA7E1+eIwBAiEAncLZP+k8bTSIAJEfFtZsF7UAk01MFkyK\nJQtzbTtkQV0CIQCOyrPjOrYi5I9Ema1Sfp7p5sAA15Wi0duHmlakZS08zQIgaU8T\n2vgd3YoM4k0wiCVxgIDY2qA7ZOWDFtNF8pEkQqE=\n-----END RSA PRIVATE KEY-----',
       public: '-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----' }
 
-You can then create the `.env` file:
-
-    cd cloudsim-auth
-    gedit .env
-
-And in the case of the keys above, copy this into the file:
+In the case of the keys above, copy this into the file:
 
     CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
     CLOUDSIM_AUTH_PRIV_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIBOQIBAAJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaKeD4bZ5So0RmyXSiMa/AK\nJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQUCQG3+vuMvFNaSivw9yuKVvdfm\nnWHXNXhuxpgV7HbtdBSNhF+wAAJ79iCXA82TeotISHxvDs5glrFOXJG69SQLjM0C\nIQDFM4+P44uIgaoAtWbcjAcdokC4IJ8b36yuTlBIij1RtQIhALJ9YNwJY6udsxXA\nGKceRqRgcAENewuGUmmA7E1+eIwBAiEAncLZP+k8bTSIAJEfFtZsF7UAk01MFkyK\nJQtzbTtkQV0CIQCOyrPjOrYi5I9Ema1Sfp7p5sAA15Wi0duHmlakZS08zQIgaU8T\n2vgd3YoM4k0wiCVxgIDY2qA7ZOWDFtNF8pEkQqE=\n-----END RSA PRIVATE KEY-----
+
+#### Custom port:
 
 It's also possible to choose which port the server will be listening on. Let's add the
 following to `.env` so the auth server is on port 4001:
 
     CLOUDSIM_PORT=4001
+
+#### Auth0 credentials
+
+You must provide credentials for your Auth0 account:
+
+AUTH0_CLIENT_ID=
+AUTH0_CLIENT_SECRET=
+AUTH0_DOMAIN=
 
 ### Running ###
 
