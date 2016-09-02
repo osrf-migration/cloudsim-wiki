@@ -60,9 +60,9 @@ following to `.env` so the auth server is on port 4001:
 
 You must provide credentials for your Auth0 account:
 
-AUTH0_CLIENT_ID=
-AUTH0_CLIENT_SECRET=
-AUTH0_DOMAIN=
+* `AUTH0_CLIENT_ID`
+* `AUTH0_CLIENT_SECRET`
+* `AUTH0_DOMAIN`
 
 ### Running ###
 
@@ -92,28 +92,51 @@ to launch machines.
 
 ### Configuration ###
 
+Create the `.env` file:
+
+    cd cloudsim-portal
+    gedit .env
+
+Then add the following environment variables:
+
+#### AWS keys
+
 AWS keys are needed to launch machines. You can see more information
 [here](https://bitbucket.org/osrf/cloudsim-portal) on how to setup AWS.
 
-The portal also needs Cloudsim-auth's public key to decode webtokens. It's also
-possible to specify the port to use.
-
-Thus, using the previously generated public key and using port 4002, the `.env`
-file will have the following:
-
-    CLOUDSIM_PORT=4002
-    CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
-    AWS_SECRET_ACCESS_KEY=
-    AWS_ACCESS_KEY_ID=
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_ACCESS_KEY_ID`
 
 > If you use your own AWS keys, you probably won't have access to the ami's which
 > are currently hardcoded in the user interface. This means that you'll need to
 > [create your own amis](Developing_sim) which have `cloudsim-sim` and change the code in
 > `cloudsim-widgets` to use those.
 
+#### Cloudsim-auth's credentials
+
+The portal also needs Cloudsim-auth's public key to decode webtokens.
+If using the keys above, it would be:
+
+    CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
+
+
+#### Custom port
+
+It's also possible to specify the port to use. Let's use port 4002:
+
+    CLOUDSIM_PORT=4002
+
+#### Admin user
+
+You can specify the admin user, which will start with all permissions:
+
+* `CLOUDSIM_ADMIN`
+
 ### Running ###
 
-TODO: Setup / run mongo?
+You must start a mongodb database before running the portal. More
+instructions
+[here](https://bitbucket.org/osrf/cloudsim-portal).
 
 To run the server, simply run:
 
@@ -139,6 +162,15 @@ communicate with both the auth and portal servers.
 
 ### Configuration ###
 
+Create the `.env` file:
+
+    cd cloudsim-widgets
+    gedit .env
+
+Then add the following environment variables:
+
+#### Server URLs
+
 Cloudsim-widgets needs to know where the auth server and the portal servers are
 located. To use the previously launched servers, the `.env` file will look like
 this:
@@ -146,12 +178,28 @@ this:
     CLOUDSIM_AUTH_URL=https://localhost:4001
     CLOUDSIM_PORTAL_URL=https://localhost:4002
 
-
 If you are not working against local versions of the servers, you can use the public ones.
 This is an example of the `.env` file in Cloudsim-widgets that uses the beanstalk servers:
 
     CLOUDSIM_AUTH_URL=https://107.22.153.254:4000
     CLOUDSIM_PORTAL_URL=https://cloudsimportal-env.us-east-1.elasticbeanstalk.com:4000
+
+#### Auth0 credentials
+
+You must provide credentials for your Auth0 account:
+
+* `AUTH0_CLIENT_ID`
+* `AUTH0_DOMAIN`
+
+#### Users
+
+You can specify the admin user, and for debugging, also some other users:
+
+* `CLOUDSIM_ADMIN`
+* `SRC_ADMIN`
+* `SRC_COMPETITOR`
+* `ARIAC_ADMIN`
+* `ARIAC_COMPETITOR`
 
 ### Running ###
 
@@ -177,7 +225,7 @@ You can do a simple check as follows:
 
 1. Enter [https://localhost:5000/signup](https://localhost:5000/signup)
 
-1. Create an account for username "admin"
+1. Create an account with the admin's username.
 
 1. Use the password to login
 
