@@ -2,20 +2,20 @@
 
 ## Cloudsim-portal ##
 
-### Updates ###
+### Depends on these Cloudsim packages:
+
+* [cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant)
+
+### These Cloudsim packages depend on it:
+
+* [gz-grant](https://github.com/osrf/gz-grant): Uses REST API.
+* [gz-simulatorlauncher](https://github.com/osrf/gz-simulatorlauncher): Uses REST API.
+* [gz-simulatorq](https://github.com/osrf/gz-simulatorq): Uses REST API.
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
+
+### How to make changes
 
 * Pull request to [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal)
 * Once merged into default, public server is redeployed by Codeship.
 
-### Impacted repos ###
-
-The following repos might need code updates or redeployment to take
-cloudsim-portal changes into account.
-
-* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
-* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
-* [gz-XXX](https://github.com/osrf/?utf8=%E2%9C%93&query=gz-)
-
-
-
-
+[See Cloudsim-portal's API](Interface_portal)
