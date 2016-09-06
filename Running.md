@@ -223,7 +223,7 @@ Now go to your browser and open
 
 You can do a simple check as follows:
 
-1. Enter [https://localhost:5000/signup](https://localhost:5000/signup)
+1. Enter [https://localhost:5000/](https://localhost:5000/)
 
 1. Create an account with the admin's username.
 
@@ -232,13 +232,10 @@ You can do a simple check as follows:
 1. You should now be inside the dashboard, this means we're successfully talking
 to the `cloudsim-auth` server!
 
-1. You should see a `Launch a machine` widget.
+1. You should see a `Launch a machine` widget. If you don't, either we're not
+talking to the server, or there's an issue with the admin name.
 
 1. Click on the `Launch!` button, and a new machine should appear, this means
 we're successfully talking to the `cloudsim-portal` server and the portal is
 successfully talking to AWS!
-
-
-
-
 
