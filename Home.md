@@ -57,6 +57,8 @@ The following pages describe the API for each block.
 
 1. [cloudsim-widgets](Interface_widgets)
 
+1. [cloudsim-keys](Interface_keys)
+
 1. gz- web components
 
     * [gz-accounts](https://osrf.github.io/gz-accounts/components/gz-accounts/)
