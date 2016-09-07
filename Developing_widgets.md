@@ -235,23 +235,46 @@ branch build in `cloudsim-widget`'s
 
 ## **Tip 8**: Creating a `gz-` component
 
-TODO
+1. Create a new boilerplate component
 
-Need instructions on how to:
+    TODO
 
-* Create a new boilerplate component
+1. Generate its documentation
 
-* Generate its documentation
+1. Generate its demo page
 
-* Generate its demo page
+1. Setup tests
 
-* Setup tests
+1. Setup codeship
 
-* Setup codeship
+1. Release
 
-* Release
+    On the GitHub repository page, go to Code -> Releases -> Draft a new release.
 
-* Bower install it in cloudsim-widgets
+    Be mindful of semantic versioning when releasing. API changes should change
+    the major version.
 
-* Import it in `cloudsim-widgets/app/elements/elements.html`
+    Have fun with alphabetically ordered releases, see the example for
+    [gz-simulationq](https://github.com/osrf/gz-simulationq/releases) and
+    [gz-grant](https://github.com/osrf/gz-grant/releases).
+
+1. Register the package with Bower
+
+    Make sure `bower.json` has all the
+    [required and recommended](https://github.com/bower/spec/blob/master/json.md)
+    fields.
+
+    We need to add it to the bower registry. To do that, for example, for `gz-accounts`:
+
+        bower register gz-accounts https://github.com/osrf/gz-accounts.git
+
+    You can then check that the component's name was added to the
+    [bower packages](https://bower.herokuapp.com/packages).
+    (Do a search on the page).
+
+1. Bower install it in cloudsim-widgets
+
+        bower install --save gz-accounts
+
+1. Import it in `cloudsim-widgets/app/elements/elements.html`
 
