@@ -46,12 +46,14 @@
 1. Run [build.bash](https://bitbucket.org/osrf/cloudsim/src/default/build.bash)
 to get the sources and create links accross projects.
 
-        bash build.bash
+        setup.bash
 
-    `build.bash` does many things, and each of them could fail.
+    `setup.bash` does many things, and each of them could fail.
 
     1. The vcs import command clones all the repos, so **make sure you have ssh setup
     with bitbucket and github**.
+    1. The `build.bash` script goes into each project and invokes `npm install` and `bower install`
+    1. the `link.bash` script sets up link between your repos. This ignores the version numbers, but allows you to modify the code from within your repo. See `npm link` and `bower link` commands.
 
 ### Projects and links explained ###
 
@@ -66,7 +68,7 @@ and are useful for production.
 1. Linked packages allow you to use local copies of repositories, and are
 useful for development.
 
-The `build.bash` script links the cloudsim packages:
+The `link.bash` script links the cloudsim packages:
 
 1. `bower_create_links` and `npm_create_links` make local copies available to
 be used by others.
