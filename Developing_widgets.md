@@ -241,11 +241,19 @@ branch build in `cloudsim-widget`'s
 
 1. Generate its documentation
 
+    TODO
+
 1. Generate its demo page
+
+    TODO
 
 1. Setup tests
 
+    TODO
+
 1. Setup codeship
+
+    TODO
 
 1. Release
 
