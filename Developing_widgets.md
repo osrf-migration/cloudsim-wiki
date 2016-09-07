@@ -239,17 +239,17 @@ branch build in `cloudsim-widget`'s
 
     TODO
 
-1. Generate its documentation
+1. Generate its documentation and demo page
 
-    TODO
-
-1. Generate its demo page
-
-    TODO
+         git clone git://github.com/Polymer/tools.git
+         use the /tools/bin/gp.sh script
+  
+         see https://www.polymer-project.org/1.0/docs/tools/reusable-elements
 
 1. Setup tests
 
-    TODO
+    Add your selenium tests to the test directory
+    run them using polymer test
 
 1. Setup codeship
 
@@ -280,9 +280,12 @@ branch build in `cloudsim-widget`'s
     [bower packages](https://bower.herokuapp.com/packages).
     (Do a search on the page).
 
-1. Bower install it in cloudsim-widgets
+1. Bower install it in your project (cloudsim-widgets)
 
         bower install --save gz-accounts
 
-1. Import it in `cloudsim-widgets/app/elements/elements.html`
+        Import it in `cloudsim-widgets/app/elements/elements.html`
+
+        
+
 
