@@ -54,7 +54,10 @@ In the case of the keys above, copy this into the file:
 It's also possible to choose which port the server will be listening on. Let's add the
 following to `.env` so the auth server is on port 4001:
 
-    CLOUDSIM_PORT=4001
+    PORT=4001
+
+> **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
+the port which is forwarded to the proxy server, usually 8081.
 
 #### Auth0 credentials
 
@@ -80,10 +83,10 @@ command for something like:
     listening on port 4001
 
 Now go to your browser and open
-[https://localhost:4001](https://localhost:4001)
-. Accept the invalid security certificate, and your server is ready to be used.
+[http://localhost:4001](http://localhost:4001) to check that the server is
+running.
 
-> Note that you must accept the invalid certificates for every browser you use.
+> Read about [HTTPS](HTTPS)
 
 ## Cloudsim-portal ##
 
@@ -119,12 +122,14 @@ If using the keys above, it would be:
 
     CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
 
+#### Custom port:
 
-#### Custom port
+Again, let's add a custom port to `.env`.
 
-It's also possible to specify the port to use. Let's use port 4002:
+    PORT=4002
 
-    CLOUDSIM_PORT=4002
+> **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
+the port which is forwarded to the proxy server, usually 8081.
 
 #### Admin user
 
@@ -149,11 +154,13 @@ By default, the server is launched on port 4000, but since we specified 4002 on
 To check what port is being used, search in the output of the previous
 command for something like:
 
-    listening on *:4002
+    listening on port 4002
 
 Now go to your browser and open
-[https://localhost:4002](https://localhost:4002)
-. Accept the invalid security certificate, and your server is ready to be used.
+[http://localhost:4002](http://localhost:4002) and check that the server is
+running.
+
+> Read about [HTTPS](HTTPS)
 
 ## Cloudsim-widgets ##
 
@@ -175,14 +182,14 @@ Cloudsim-widgets needs to know where the auth server and the portal servers are
 located. To use the previously launched servers, the `.env` file will look like
 this:
 
-    CLOUDSIM_AUTH_URL=https://localhost:4001
-    CLOUDSIM_PORTAL_URL=https://localhost:4002
+    CLOUDSIM_AUTH_URL=http://localhost:4001
+    CLOUDSIM_PORTAL_URL=http://localhost:4002
 
 If you are not working against local versions of the servers, you can use the public ones.
 This is an example of the `.env` file in Cloudsim-widgets that uses the beanstalk servers:
 
-    CLOUDSIM_AUTH_URL=https://107.22.153.254:4000
-    CLOUDSIM_PORTAL_URL=https://cloudsimportal-env.us-east-1.elasticbeanstalk.com:4000
+    CLOUDSIM_AUTH_URL=https://devauth.cloudsim.io
+    CLOUDSIM_PORTAL_URL=https://devportal.cloudsim.io
 
 #### Auth0 credentials
 
