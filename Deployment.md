@@ -6,7 +6,8 @@ General deployment instructions using AWS Elastic Beanstalk (EB) and Codeship.
 
 ## The general idea
 
-Skip this section if you're not interested in knowing what's going on.
+(Skip this section if you're not interested in knowing what's going on and
+just wants to follow instructions)
 
 EB adds a load balancer between the client and the instances which are running
 the server code. The deployment setup described here configures HTTPS between
@@ -23,9 +24,11 @@ The setup is based on
 [this](https://github.com/awslabs/eb-tomcat-snakes/blob/master/src/.ebextensions/inactive/HTTPS.md)
 example. On all cloudsim servers, this is done with 3 files:
 
-    * `.ebextensions/https-lbterminate-listener.config`
-    * `.ebextensions/https-lbterminate.config`
-    * `ebextensions.bash`
+* `.ebextensions/https-lbterminate-listener.config`
+
+* `.ebextensions/https-lbterminate.config`
+
+* `ebextensions.bash`
 
 The first file has the following contents. It redirects the load balancer
 (i.e. the listener) port 443 (https) to the instance's port 80.
@@ -37,7 +40,8 @@ The first file has the following contents. It redirects the load balancer
         InstanceProtocol: HTTP
 
 The second file has the following contents. It creates a custom security group for the
-load balancer which opens port 443 (https), 22 (ssh) and icmp for ping.
+load balancer which opens port 443 (https), 22 (ssh) and icmp for ping to be used by
+the client.
 
     option_settings:
       # Add secure listener to load balancer
@@ -75,15 +79,15 @@ load balancer which opens port 443 (https), 22 (ssh) and icmp for ping.
               ToPort: 80
               CidrIp: 0.0.0.0/0
 
-The file above has a couple of account-specific info:
+The file above has some account-specific info:
 
-    * **<ARN>**: The ARN of your certificate created through the
-        [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
+* **<ARN>**: The ARN of your certificate created through the
+    [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
 
-    * **<VPC>**: The id of the VPC in which your instances are.
+* **<VPC>**: The id of the VPC in which your instances are.
 
 Due to the sensitive information, this file is not kept in source control.
-But if we want continuous deployment throguh Codeship, we need this file to
+And since we want continuous deployment through Codeship, we need this file to
 be automatically generated every time the code is deployed.
 
 To that end, we use the 3rd file, `ebextensions.bash`, to generate the file
@@ -121,7 +125,7 @@ above at deploy time as follows:
       configurations. The environment configurations are persistent across
       deployments, so if the environment is incorrectly initialized, for
       example, with EB’s Sample Application, our ebextension files won’t be
-      able to setup https.
+      able to fix https in future deployments.
 
 1. Use default environment info
 
@@ -190,7 +194,7 @@ environment’s dashboard.
 
 Buy this point, your server should be accessible via https://<name>.<domain>
 
-Now to Codeship.
+Now on to Codeship.
 
 ## S3 bucket
 
