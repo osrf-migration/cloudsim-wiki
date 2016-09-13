@@ -57,7 +57,8 @@ following to `.env` so the auth server is on port 4001:
     PORT=4001
 
 > **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
-the port which is forwarded to the proxy server, usually 8081.
+the port which is forwarded to the proxy server, usually 8081. Read more about
+deployment [here](Deployment).
 
 #### Auth0 credentials
 
@@ -86,7 +87,7 @@ Now go to your browser and open
 [http://localhost:4001](http://localhost:4001) to check that the server is
 running.
 
-> Read about [HTTPS](HTTPS)
+> For deployment, go [here](Deployment)
 
 ## Cloudsim-portal ##
 
@@ -129,7 +130,8 @@ Again, let's add a custom port to `.env`.
     PORT=4002
 
 > **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
-the port which is forwarded to the proxy server, usually 8081.
+the port which is forwarded to the proxy server, usually 8081. Read more about
+deployment [here](Deployment).
 
 #### Admin user
 
@@ -160,7 +162,7 @@ Now go to your browser and open
 [http://localhost:4002](http://localhost:4002) and check that the server is
 running.
 
-> Read about [HTTPS](HTTPS)
+> For deployment, go [here](Deployment)
 
 ## Cloudsim-widgets ##
 
@@ -190,6 +192,17 @@ This is an example of the `.env` file in Cloudsim-widgets that uses the beanstal
 
     CLOUDSIM_AUTH_URL=https://devauth.cloudsim.io
     CLOUDSIM_PORTAL_URL=https://devportal.cloudsim.io
+
+#### Custom port:
+
+It's also possible to choose which port the server will be listening on. Let's add the
+following to `.env` so the auth server is on port 5000:
+
+    PORT=5000
+
+> **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
+the port which is forwarded to the proxy server, usually 8081. Read more about
+deployment [here](Deployment).
 
 #### Auth0 credentials
 
@@ -246,3 +259,4 @@ talking to the server, or there's an issue with the admin name.
 we're successfully talking to the `cloudsim-portal` server and the portal is
 successfully talking to AWS!
 
+[Proceed to Deployment](Deployment)
