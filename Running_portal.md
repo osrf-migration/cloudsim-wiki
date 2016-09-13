@@ -2,8 +2,7 @@
 
 # Running cloudsim-portal
 
-Now we'll launch the portal server, which manages users and talks to Amazon AWS
-to launch machines.
+Now we'll launch the portal server, which talks to Amazon AWS to launch machines.
 
 ### Configuration ###
 
@@ -30,7 +29,8 @@ AWS keys are needed to launch machines. You can see more information
 #### Cloudsim-auth's credentials
 
 The portal also needs Cloudsim-auth's public key to decode webtokens.
-If using the keys above, it would be:
+If using the keys in the [cloudsim-auth](Running_auth)'s instructions, it
+would be:
 
     CLOUDSIM_AUTH_PUB_KEY=-----BEGIN PUBLIC KEY-----\nMFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAIl+bpv62gw3LbtNPZs7LU3gRLpNAtaK\neD4bZ5So0RmyXSiMa/AKJ8gZ2zZ33NhoHJ47i7AS48OhC4VmSHXETbUCAQU=\n-----END PUBLIC KEY-----
 

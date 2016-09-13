@@ -2,8 +2,6 @@
 
 # Running cloudsim-widgets
 
-## Cloudsim-widgets ##
-
 The last server to launch is the one for the graphical user interface. It will
 communicate with both the auth and portal servers.
 
@@ -19,8 +17,8 @@ Then add the following environment variables:
 #### Server URLs
 
 Cloudsim-widgets needs to know where the auth server and the portal servers are
-located. To use the previously launched servers, the `.env` file will look like
-this:
+located. To use the previously locally launched servers, the `.env` file will
+look like this:
 
     CLOUDSIM_AUTH_URL=http://localhost:4001
     CLOUDSIM_PORTAL_URL=http://localhost:4002
@@ -71,19 +69,18 @@ By default, the server is launched on port 5000.
 To check what port is being used, search in the output of the previous
 command for something like:
 
-           Local: https://localhost:5000
+           Local: http://localhost:5000
 
 Now go to your browser and open
-[https://localhost:5000](https://localhost:5000)
-. Accept the invalid security certificate, and the Cloudsim website will appear!
+[http://localhost:5000](http://localhost:5000) to see the app.
 
 ## Checking if everything is working ##
 
 You can do a simple check as follows:
 
-1. Enter [https://localhost:5000/](https://localhost:5000/)
+1. Enter [http://localhost:5000/](http://localhost:5000/)
 
-1. Create an account with the admin's username.
+1. Create an account with the username in `CLOUDSIM_ADMIN`.
 
 1. Use the password to login
 
@@ -96,5 +93,7 @@ talking to the server, or there's an issue with the admin name.
 1. Click on the `Launch!` button, and a new machine should appear, this means
 we're successfully talking to the `cloudsim-portal` server and the portal is
 successfully talking to AWS!
+
+1. Congrats, your cloudsim app is running successfully!
 
 [Back to Running](Running)
