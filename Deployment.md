@@ -17,7 +17,7 @@ Another important detail is that the EC2 instances run a proxy server (nginx)
 on port 80, which forwards to our nodejs servers on a port determined by the
 environment variable `PORT` (usually 8081).
 
-    ![https](images/https.png)
+![https](images/https.png)
 
 The setup is based on
 [this](https://github.com/awslabs/eb-tomcat-snakes/blob/master/src/.ebextensions/inactive/HTTPS.md)
