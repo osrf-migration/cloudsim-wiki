@@ -12,6 +12,10 @@
     Instructions on how to configure the environments for all servers and launch
     them all locally at once.
 
+1. [Deployment](Deployment)
+
+    Instructions on how to deploy servers using AWS Elastic Beanstalk and Codeship.
+
 ## Development
 
 ### Building blocks
