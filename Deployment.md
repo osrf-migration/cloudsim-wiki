@@ -162,6 +162,21 @@ above at deploy time as follows:
    the environment variables (tip: press + to add new ones, once you click
    "Apply" it takes a while to deploy)
 
+1. Elastic Beanstalk automatically creates a couple of security groups which leave
+your EC2 instances port 80 open to anywhere. To close these:
+
+    1. Go to your [EC2 console](https://console.aws.amazon.com/ec2)
+
+    1. Choose one of the machines named after your environment
+
+    1. On the bottom panel, after Security Groups, click on "view rules"
+
+    1. If you have port 80 with Source 0.0.0.0/0, anyone can access it.
+
+    1. Click on the security group which provides that rule
+
+    1. On "Inboud", delete the rule
+
 ## Route 53
 
 For https to work, your domain must match the one on your ACM certificates.
