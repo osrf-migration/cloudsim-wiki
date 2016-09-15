@@ -64,7 +64,9 @@ create **leaf resources**.
 
 * Leaf resources have permissions and may have data.
 
-* Route to read permissions: `GET /permissions/<resource_id>`
+* Route to read all resource permissions: `GET /permissions`
+
+* Route to read permissions for a resource: `GET /permissions/<resource_id>`
 
 * Route to read data: `GET /<root_id>/<leaf_id>`
 
