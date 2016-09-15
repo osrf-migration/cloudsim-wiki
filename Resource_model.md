@@ -90,3 +90,5 @@ Server | Resource | Root | leaf | Create | Delete | Read | Update data | Grant /
 -------|----------|------|------|--------|--------|------|-------------|---------------
 auth | groups | ✔ | group- | on init | never | GET /permissions/groups | - | POST /permissions/groups
 auth | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group-
+
+Add all here once the common pattern has been agreed upon.
