@@ -1,6 +1,6 @@
 # Resource model
 
-1. Everything is a resource. Simulators, groups, simulations...
+1. Everything is a resource. Simulators, teams, simulations...
 
 1. Users can have one of the following permissions to a resource:
 
