@@ -40,6 +40,8 @@ granted for each resource.
 1. Having write permission to a **root resource** means a user can
 create **leaf resources**.
 
+1. When a resource changes, a websocket notifies each user with permissions.
+
 ## Operations
 
 ### Create
