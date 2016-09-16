@@ -95,7 +95,7 @@ data in leaves.
 
 Server | Resource | Root | leaf | Create | Delete | Read | Update data | Grant / revoke
 -------|----------|------|------|--------|--------|------|-------------|---------------
-auth | groups | ✔ | group- | on init | never | GET /permissions/groups | - | POST /permissions/groups
-auth | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group-
+auth | groups | ✔ | group- | on init | never | GET /permissions/groups GET /groups | - | POST /permissions/groups DELETE /permissions/groups
+auth | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group- DELETE /permissions/group-
 
 Add all here once the common pattern has been agreed upon.
