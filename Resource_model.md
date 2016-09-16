@@ -62,7 +62,8 @@ create **leaf resources**.
 
 ### Read
 
-* Root resources have permissions but usually no data.
+* Root resources have permissions, and their data contains the list of fields for the
+data in leaves.
 
 * Leaf resources have permissions and may have data.
 
@@ -76,7 +77,7 @@ create **leaf resources**.
 
 ### Update data
 
-* Root resources have no data.
+* Root resources data is not updatable.
 
 * Leaf resources may have data.
 
