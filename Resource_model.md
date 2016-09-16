@@ -60,11 +60,13 @@ create **leaf resources**.
 
 ### Read
 
-* Root resources have permissions but no data. [Why can't they have data?]
+* Root resources have permissions but usually no data.
 
 * Leaf resources have permissions and may have data.
 
 * Route to read all resource permissions: `GET /permissions`
+
+* Route to read all leaves of a root: `GET /<root_id>`
 
 * Route to read permissions for a resource: `GET /permissions/<resource_id>`
 
@@ -80,10 +82,9 @@ create **leaf resources**.
 
 ### Update permissions
 
-* Route: `POST /permissions/<resource_id>` [to grant]
-* [`DELETE /permissions/<resource_id>` to revoke?]
+* Route to grant: `POST /permissions/<resource_id>`
 
-
+* Route to revoke: `DELETE /permissions/<resource_id>`
 
 ## Summary of resources and operations
 
