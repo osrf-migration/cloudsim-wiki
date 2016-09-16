@@ -40,7 +40,7 @@ granted for each resource.
 1. Having write permission to a **root resource** means a user can
 create **leaf resources**.
 
-1. When a resource changes, a websocket notifies each user with permissions.
+1. When a resource changes, a websocket notifies each user with permissions to it.
 
 ## Operations
 
@@ -67,19 +67,21 @@ data in leaves.
 
 * Leaf resources have permissions and may have data.
 
-* Route to read all resource permissions: `GET /permissions`
+* Route to read all resources (which user has permission to): `GET /permissions`
 
 * Route to read all leaves of a root: `GET /<root_id>`
 
-* Route to read permissions for a resource: `GET /permissions/<resource_id>`
+* Both routes below return all data and permissions for a resource: 
 
-* Route to read data: `GET /<root_id>/<leaf_id>`
+    * `GET /permissions/<resource_id>`
+
+    * `GET /<root_id>/<leaf_id>`
 
 ### Update data
 
 * Root resources data is not updatable.
 
-* Leaf resources may have data.
+* Leaf resources may have data. The data format will be detailed in its root resource.
 
 * Route: `PUT /<root_id>/<leaf_id>`
 
