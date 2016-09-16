@@ -80,7 +80,8 @@ create **leaf resources**.
 
 ### Update permissions
 
-* Route: `POST /permissions/<resource_id>`
+* Route: `POST /permissions/<resource_id>` [to grant]
+* [`DELETE /permissions/<resource_id>` to revoke?]
 
 
 
