@@ -60,7 +60,7 @@ create **leaf resources**.
 
 ### Read
 
-* Root resources have permissions but no data.
+* Root resources have permissions but no data. [Why can't they have data?]
 
 * Leaf resources have permissions and may have data.
 
