@@ -16,6 +16,12 @@ file:
 
 Then add the following environment variables:
 
+#### Admin user
+
+You can specify the admin user, which will start with all permissions:
+
+* `CLOUDSIM_ADMIN`
+
 #### Webtoken decoding
 
 Two keys are necessary for webtoken decoding:
