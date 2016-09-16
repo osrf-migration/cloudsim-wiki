@@ -71,7 +71,7 @@ data in leaves.
 
 * Route to read all leaves of a root: `GET /<root_id>`
 
-* Both routes below return all data and permissions for a resource: 
+* Both routes below return all data and permissions for a resource:
 
     * `GET /permissions/<resource_id>`
 
@@ -95,7 +95,11 @@ data in leaves.
 
 Server | Resource | Root | leaf | Create | Delete | Read | Update data | Grant / revoke
 -------|----------|------|------|--------|--------|------|-------------|---------------
-auth | groups | ✔ | group- | on init | never | GET /permissions/groups GET /groups | - | POST /permissions/groups DELETE /permissions/groups
-auth | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group- DELETE /permissions/group-
+**auth** | | | | | | | |
+ | groups | ✔ | group- | on init | never | GET /permissions/groups GET /groups | - | POST /permissions/groups DELETE /permissions/groups
+ | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group- DELETE /permissions/group-
+**portal** | | | | | | | |
+ | simulators | ✔ | simulator- | on init | never | GET /permissions/simulators GET /simulators | - | POST /permissions/simulators DELETE /permissions/simulators
+ | simulator- | simulators | ✔ | POST /simulators | DELETE /simulators/simulator- | GET /simulators/simulator- GET /permissions/simulator- | POST /simulators/simulator- | POST /permissions/simulator- DELETE /permissions/simulator-
 
 Add all here once the common pattern has been agreed upon.

@@ -51,6 +51,9 @@
 
 ### Interfaces
 
+* [Resource model](Resource_model): Overview of the resource model shared by all
+servers.
+
 The following pages describe the API for each block.
 
 1. [cloudsim-auth](Interface_auth)
