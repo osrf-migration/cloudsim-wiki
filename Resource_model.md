@@ -37,6 +37,12 @@ granted for each resource.
 
 1. A resource can be a **root resource** or a **leaf resource**.
 
+1. Naming convention:
+
+    * Root resource is plural: `<id>s` (i.e. groups)
+
+    * Leaf resources are singular, with a dash and number: `<id>-#` (i.e. group-0)
+
 1. Having write permission to a **root resource** means a user can
 create **leaf resources**.
 
@@ -96,10 +102,10 @@ data in leaves.
 Server | Resource | Root | leaf | Create | Delete | Read | Update data | Grant / revoke
 -------|----------|------|------|--------|--------|------|-------------|---------------
 **auth** | | | | | | | |
- | group | ✔ | group- | on init | never | GET /permissions/group GET /group | - | POST /permissions/group DELETE /permissions/group
- | group- | group | ✔ | POST /group | DELETE /group/group- | GET /group/group- GET /permissions/group- | POST /group/group- | POST /permissions/group- DELETE /permissions/group-
+ | groups | ✔ | group- | on init | never | GET /permissions/groups GET /groups | - | POST /permissions/groups DELETE /permissions/groups
+ | group- | groups | ✔ | POST /groups | DELETE /groups/group- | GET /groups/group- GET /permissions/group- | POST /groups/group- | POST /permissions/group- DELETE /permissions/group-
 **portal** | | | | | | | |
- | simulator | ✔ | simulator- | on init | never | GET /permissions/simulator GET /simulator | - | POST /permissions/simulator DELETE /permissions/simulator
- | simulator- | simulator | ✔ | POST /simulator | DELETE /simulator/simulator- | GET /simulator/simulator- GET /permissions/simulator- | POST /simulator/simulator- | POST /permissions/simulator- DELETE /permissions/simulator-
+ | simulators | ✔ | simulator- | on init | never | GET /permissions/simulators GET /simulators | - | POST /permissions/simulators DELETE /permissions/simulators
+ | simulator- | simulators | ✔ | POST /simulators | DELETE /simulators/simulator- | GET /simulators/simulator- GET /permissions/simulator- | POST /simulators/simulator- | POST /permissions/simulator- DELETE /permissions/simulator-
 
 Add all here once the common pattern has been agreed upon.
