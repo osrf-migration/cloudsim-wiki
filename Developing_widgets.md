@@ -211,7 +211,8 @@ When using a new component, don't forget to add it to `app/elements/elements.htm
     ------------- | -------------
     gz-accounts | cs-signuppage
     gz-cmd |
-    gz-grant | cs-app, cs-sharebutton
+    gz-grant | cs-app, cs-groups, cs-sharebutton
+    gz-resources | cs-app, cs-groups, cs-sharebutton
     gz-simulationlauncher |
     gz-simulationq | cs-simulationq
     gz-simulator |
@@ -237,19 +238,20 @@ branch build in `cloudsim-widget`'s
 
 1. Create a new boilerplate component
 
-    TODO
+       polymer init
 
 1. Generate its documentation and demo page
 
          git clone git://github.com/Polymer/tools.git
          use the /tools/bin/gp.sh script
-  
+
          see https://www.polymer-project.org/1.0/docs/tools/reusable-elements
 
 1. Setup tests
 
-    Add your selenium tests to the test directory
-    run them using polymer test
+    Add your selenium tests to the test directory run them:
+
+        polymer test
 
 1. Setup codeship
 
@@ -286,6 +288,6 @@ branch build in `cloudsim-widget`'s
 
         Import it in `cloudsim-widgets/app/elements/elements.html`
 
-        
+
 
 
