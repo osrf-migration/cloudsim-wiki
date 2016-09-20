@@ -127,23 +127,14 @@ First move into the widgets directory:
 
 There are two ways to run the servers:
 
-* `gulp serve`: Good for debugging, but slow to load. See BrowserSync below.
+* `npm run dev`: Good for debugging, but slow to load.
 
-* `gulp serve:dist`: Good for production, all the code is optimized in a process
+* `npm start`: Good for production, all the code is optimized in a process
 called "vulcanize".
 
 ## **Tip 3**: BrowserSync
 
-By default, BrowserSync is at work while the server is up. Whenever you make a
-change to the source code, the browser will refresh and you can see the results
-immediately.
-
-Another BrowserSync feature is that whatever you do in one browser will be
-reflected on all other open browsers running the app. This might make it
-difficult to test two different users at the same time, and can cause some
-actions to be performed twice if you accidentaly forgot another browser open.
-
-You can configure BrowserSync at [http://localhost:3001/](http://localhost:3001/).
+**The latest version of cloudsim-widgets doesn't support browser sync anymore**
 
 ## **Tip 4**: Modifying a `cs-` component
 

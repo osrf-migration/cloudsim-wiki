@@ -47,6 +47,12 @@ You must provide credentials for your Auth0 account:
 * `AUTH0_CLIENT_ID`
 * `AUTH0_DOMAIN`
 
+#### Cloudsim-auth public key
+
+We also need the cloudsim-auth public key to use cloudsim-grant in the back end:
+
+* `CLOUDSIM_AUTH_PUB_KEY`
+
 #### Users
 
 You can specify the admin user, and for debugging, also some other users:
@@ -59,12 +65,14 @@ You can specify the admin user, and for debugging, also some other users:
 
 ### Running ###
 
-To run the server, simply run:
+To run the server in dev mode:
 
     cd cloudsim-widgets
-    gulp serve
+    npm run dev
 
-By default, the server is launched on port 5000.
+For production:
+
+    npm start
 
 To check what port is being used, search in the output of the previous
 command for something like:
