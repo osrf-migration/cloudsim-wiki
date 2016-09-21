@@ -53,6 +53,7 @@
 
 * [Resource model](Resource_model): Overview of the resource model shared by all
 servers.
+* [Server structure](Server structure): Overview of a typical server.
 
 The following pages describe the API for each block.
 
