@@ -81,7 +81,15 @@ Collections are data types (usually in a list form) that is served by a server. 
 * calls to middleware with mock requests and responses
 * call to the entire running server, using supertest.
 
-## build tools
+## build tools, best practices
 
 While certain servers use `gulp` as a build tool, this practice is discouraged (now) in favor of using scripts defined in package.json.
+
+You are encouraged to use the new features of the javascript language:
+
+* `const` and `let` over `var`
+*  classes
+*  avoid unnecessary semi colons `;`
+*  es6 strings templates (they are multiline strings, like Python's """ strings)
+*  arrow functions for cases where `this` is not used: (x,y) => x + y
 
