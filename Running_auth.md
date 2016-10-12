@@ -51,13 +51,13 @@ following to `.env` so the auth server is on port 4001:
 
     PORT=4001
 
-> **Note**: When deploying with Elastic Beanstalk, `PORT` will be automatically set to
+> **Note**: When deploying with AWS Elastic Beanstalk, `PORT` will be automatically set to
 the port which is forwarded to the proxy server, usually 8081. Read more about
 deployment [here](Deployment).
 
 #### Auth0 credentials
 
-You must provide credentials for your Auth0 account:
+You must provide credentials for your [Auth0](https://auth0.com/) account:
 
 * `AUTH0_CLIENT_ID`
 * `AUTH0_CLIENT_SECRET`
