@@ -53,15 +53,9 @@ We also need the cloudsim-auth public key to use cloudsim-grant in the back end:
 
 * `CLOUDSIM_AUTH_PUB_KEY`
 
-#### Users
-
-You can specify the admin user, and for debugging, also some other users:
+#### Admin user:
 
 * `CLOUDSIM_ADMIN`
-* `SRC_ADMIN`
-* `SRC_COMPETITOR`
-* `ARIAC_ADMIN`
-* `ARIAC_COMPETITOR`
 
 ### Running ###
 
