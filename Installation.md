@@ -17,7 +17,7 @@
 
 1. Install **mongodb**
 
-[Mongodb installation](https://docs.mongodb.com/manual/installation/)
+    [Mongodb installation](https://docs.mongodb.com/manual/installation/)
 
 1. Install global node modules:
 
