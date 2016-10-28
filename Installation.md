@@ -15,6 +15,10 @@
         curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
         sudo apt install -y nodejs
 
+1. Install **mongodb**
+
+[Mongodb installation](https://docs.mongodb.com/manual/installation/)
+
 1. Install global node modules:
 
     a. Bower, the package manager for the browser components
