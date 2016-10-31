@@ -9,6 +9,8 @@
 ### These Cloudsim packages depend on it:
 
 * [gz-grant](https://github.com/osrf/gz-grant): Uses REST API.
+* [gz-machinetypes](https://github.com/osrf/gz-machinetypes): Uses REST API.
+* [gz-simulator](https://github.com/osrf/gz-simulator): Uses REST API.
 * [gz-simulatorlauncher](https://github.com/osrf/gz-simulatorlauncher): Uses REST API.
 * [gz-simulatorq](https://github.com/osrf/gz-simulatorq): Uses REST API.
 * [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
