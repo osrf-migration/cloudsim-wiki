@@ -18,7 +18,7 @@ their prefix: `gz-` or `cs-`.
 
 * Provide an interface to servers.
 * Are not meant to display information.
-* Expose a clear and simple API which which other components can use.
+* Expose a clear and simple API which other components can use.
 * Are general and not tied to the cloudsim app.
 * Each component is hosted at its own repository and can be released separately.
 * When released, any polymer app can use the component simply by referencing it
@@ -114,7 +114,7 @@ set of actions.
 
 Since our focus is on the widgets side, we don't need to worry about launching
 local auth and portal servers. So we can set our cloudsim-widgets `.env` file
-to use the public servers as explained [here](Running).
+to use the public servers as explained [here](Running_widgets).
 
 > When using public servers, be mindful of machines that had been launched
 > before you started, other developers might be working on them.
@@ -140,7 +140,8 @@ called "vulcanize".
 
 1. All `cs-` components can be found at `cloudsim-widgets/app/elements`
 
-1. The `cs-` components are currently structured as follows:
+1. The `cs-` components are roughly structured as follows. There might be
+differences due to constant development.
 
     ![Components](images/components.png)
 
@@ -148,7 +149,7 @@ called "vulcanize".
 
 1. Make a pull request to cloudsim-widgets. When merged into default, Codeship deploys
 the updated version to
-[https://cloudsim.io:5000](https://cloudsim.io:5000).
+[https://dev.cloudsim.io](https://dev.cloudsim.io).
 
 ## **Tip 5**: Creating a `cs-` component
 
@@ -185,7 +186,7 @@ displays a notification.
 
 1. Make a pull request to cloudsim-widgets. When merged into default, Codeship deploys
 the updated version to
-[https://cloudsim.io:5000](https://cloudsim.io:5000).
+[https://dev.cloudsim.io](https://dev.cloudsim.io).
 
 ## **Tip 6**: Use official components
 
@@ -200,14 +201,15 @@ When using a new component, don't forget to add it to `app/elements/elements.htm
 
     `gz-` component | Used by
     ------------- | -------------
-    gz-accounts | cs-signuppage
-    gz-cmd |
+    gz-accounts |
+    gz-cmd | cs-simulationq
     gz-grant | cs-app, cs-groups, cs-sharebutton
-    gz-resources | cs-app, cs-groups, cs-sharebutton
+    gz-machinetypes |
+    gz-resources | cs-groups, cs-machinekillbutton, cs-machinelauncher
     gz-simulationlauncher |
     gz-simulationq | cs-simulationq
     gz-simulator |
-    gz-simulatorlauncher | cs-machinelauncher
+    gz-simulatorlauncher |
     gz-simulatorq | cs-machinelist
     gz-token | cs-app
 
@@ -229,36 +231,36 @@ branch build in `cloudsim-widget`'s
 
 1. Create a new boilerplate component
 
-       polymer init
+         polymer init
 
 1. Generate its documentation and demo page
 
-```
-#!bash
+    ```
+    #!bash
 
-# git clone the Polymer tools repository somewhere outside of your 
-# element project
-git clone git://github.com/Polymer/tools.git
+    # git clone the Polymer tools repository somewhere outside of your
+    # element project
+    git clone git://github.com/Polymer/tools.git
 
-# Create a temporary directory for publishing your element and cd into it
-mkdir temp && cd temp
+    # Create a temporary directory for publishing your element and cd into it
+    mkdir temp && cd temp
 
 
-# Run the gp.sh script. This will allow you to push a demo-friendly
-# version of your page and its dependencies to a GitHub pages branch
-# of your repository (gh-pages). Below, we pass in a GitHub username
-# and the repo name for our element
+    # Run the gp.sh script. This will allow you to push a demo-friendly
+    # version of your page and its dependencies to a GitHub pages branch
+    # of your repository (gh-pages). Below, we pass in a GitHub username
+    # and the repo name for our element
 
-../tools/bin/gp.sh <username> <test-element> 
+    ../tools/bin/gp.sh <username> <test-element>
 
-# for example:
-# ../tools/bin/gp.sh osrf gz-resources
-  
+    # for example:
+    # ../tools/bin/gp.sh osrf gz-resources
 
-# Finally, clean-up your temporary directory as you no longer require it
-cd ..
-rm -rf temp
-```
+
+    # Finally, clean-up your temporary directory as you no longer require it
+    cd ..
+    rm -rf temp
+    ```
 
 
 1. Setup tests
