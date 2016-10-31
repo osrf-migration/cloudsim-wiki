@@ -16,6 +16,6 @@ None
 
 * Pull request to [cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant).
 The version number in `package.json` must be increased.
-* Someone with enough permissions must run `npm publish`.
+* Someone with enough permissions must run `npm publish` for new releases.
 
 [See Cloudsim-grant's API](Interface_grant)

@@ -10,6 +10,7 @@
 
 * [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal): Uses auth's keys.
 * [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim): Uses auth's keys.
+* [gz-resources](https://github.com/osrf/gz-resources): Uses the REST API.
 * [gz-token](https://github.com/osrf/gz-token): Uses the REST API.
 * [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
 

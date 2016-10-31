@@ -10,6 +10,8 @@
 
 * [gz-cmd](https://github.com/osrf/gz-cmd): Uses websocket.
 * [gz-grant](https://github.com/osrf/gz-grant): Uses REST API.
+* [gz-resources](https://github.com/osrf/gz-resources): Uses REST API.
+* [gz-simulationlauncher](https://github.com/osrf/gz-simulationlauncher): Uses REST API.
 * [gz-simulationq](https://github.com/osrf/gz-simulationq): Uses REST API.
 * [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
 
