@@ -2,17 +2,28 @@
 
 ## Cloudsim-sim ##
 
+### Overview
+
+Cloudsim-sim is a web server. It allows Cloudsim users to start and stops gazebo.
+
+Life cycle:
+
+The Cloudsim-portal launches cloud instance that run Cloudsim-sim. 
+
+* Cloudsim-sim can be running on the cloud instance
+* Cloudsim-sim can be running in a docker container (inside a cloud instance)
+* Cloudsim-sim can be running on a workstation (this is experimental)
+
+This means that Cloudsim-sim must be installed in the 
+
 ### Depends on these Cloudsim packages:
 
 * [cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant): Uses the Javascript API.
 
 ### These Cloudsim packages depend on it:
 
-* [gz-cmd](https://github.com/osrf/gz-cmd): Uses websocket.
 * [gz-grant](https://github.com/osrf/gz-grant): Uses REST API.
 * [gz-resources](https://github.com/osrf/gz-resources): Uses REST API.
-* [gz-simulationlauncher](https://github.com/osrf/gz-simulationlauncher): Uses REST API.
-* [gz-simulationq](https://github.com/osrf/gz-simulationq): Uses REST API.
 * [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets): (indirectly, it depends on `gz-*`)
 
 ### How to make changes
@@ -25,3 +36,4 @@ the new code and then make a new ami.
 `cloudsim-widgets/app/elements/cs-machinelauncher/cs-machinelauncher.html`
 
 [See Cloudsim-sim's API](Interface_sim)
+
