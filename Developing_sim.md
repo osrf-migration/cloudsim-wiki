@@ -2,19 +2,20 @@
 
 ## Cloudsim-sim ##
 
-### Overview
+### Overview ###
 
 Cloudsim-sim is a web server. It allows Cloudsim users to start and stops gazebo.
 
-Life cycle:
+### Life cycle ###
 
-The Cloudsim-portal launches cloud instance that run Cloudsim-sim. 
+Typically, the Cloudsim-portal launches cloud instance that run Cloudsim-sim automatically.
+There are multiple possible configurations:
 
 * Cloudsim-sim can be running on the cloud instance
 * Cloudsim-sim can be running in a docker container (inside a cloud instance)
 * Cloudsim-sim can be running on a workstation (this is experimental)
 
-This means that Cloudsim-sim must be installed in the 
+
 
 ### Depends on these Cloudsim packages:
 
