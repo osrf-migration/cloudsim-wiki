@@ -35,8 +35,8 @@ Cloudsim-sim manages a list of queued simulations, and only one simulation can r
 * Pull request to [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
 * Once merged into default, someone needs to ssh into a live machine to pull
 the new code and then make a new ami.
-* The ami must be scrubbed from ssh keys `aws/make_new_ami.bash` [sharing AMIs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/building-shared-amis.html)
-* The ami must be shared with the correct users or made public.
+* The ami must be scrubbed from ssh keys: run the script `aws/make_new_ami.bash` [sharing AMIs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/building-shared-amis.html)
+* The ami must be shared with the correct AWS accounts or made public.
 * Then add the new ami to the list in
 `cloudsim-widgets/app/elements/cs-machinelauncher/cs-machinelauncher.html`
 
