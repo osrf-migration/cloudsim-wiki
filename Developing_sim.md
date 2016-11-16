@@ -19,6 +19,10 @@ Normally, Cloudsim-sim should be running continuously (as a service) on the simu
 
 Cloudsim-sim manages a list of queued simulations, and only one simulation can run at a time.
 
+### Depends on these packages:
+
+* nodejs and npm
+* redis database `sudo apt-get install redis-server`
 
 ### Depends on these Cloudsim packages:
 
