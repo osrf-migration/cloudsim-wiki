@@ -21,7 +21,8 @@ Cloudsim-sim manages a list of queued simulations, and only one simulation can r
 
 ### Depends on these packages:
 
-* nodejs and npm
+* nodejs and npm [nodesource](https://github.com/nodesource/distributions)
+* pm2 to run as a service (on aws) `sudo npm install pm2@latest -g`
 * redis database `sudo apt-get install redis-server`
 
 ### Depends on these Cloudsim packages:
