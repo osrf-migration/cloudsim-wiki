@@ -76,7 +76,7 @@ Collections are data types (usually in a list form) that is served by a server. 
 * The module is named after the collection `simulators.js`
 * The name of the routes should be the same as the name of the collection `/simulators`
 * If you need to split a collection into multiple files, put them in a directory 
-named after the collction/route `simulators`
+named after the collection/route `simulators`
 * The module exports a `setRoute` function.
 
 
