@@ -73,7 +73,12 @@ Collections are data types (usually in a list form) that is served by a server. 
 
 1. Each collection is contained in a single js module inside the server module.
 
+* The module is named after the collection `simulators.js`
+* The name of the routes should be the same as the name of the collection `/simulators`
+* If you need to split a collection into multiple files, put them in a directory 
+named after the collction/route `simulators`
 * The module exports a `setRoute` function.
+
 
 1. Each collection unit tests are contained in a single js module in the test directory. Tests can be:
 
