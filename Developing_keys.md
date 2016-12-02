@@ -8,7 +8,7 @@
 
 ### These Cloudsim packages depend on it:
 
-* [gz-simulator](https://github.com/osrf/gz-simulator): Uses the dowload links
+* [gz-keys](https://github.com/osrf/gz-keys): Makes requests to cloudsim-keys
 
 ### How to make changes
 
