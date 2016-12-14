@@ -53,8 +53,6 @@ to get the sources and create links across projects.
     1. The vcs import command clones all the repos, so **make sure you have ssh setup
     with bitbucket and github**.
     1. The `build.bash` script goes into each project and invokes `npm install` and `bower install`
-    1. the `link.bash` script sets up link between your repos. This ignores the version numbers, but allows you to modify the code from within your repo. See `npm link` and `bower link` commands.
-    1. The `clean.bash` removes the `node_modules` and `bower_components` directories.
 
 ### Projects and links explained ###
 
