@@ -249,8 +249,6 @@ add deployment.
 
 ## Useful tools
 
-1. Files location 
-
 The `/var/app/current/` directory contains the node files
 
 Following the node log file in real time: `tail -f /var/log/nodejs/nodejs.log`
