@@ -247,3 +247,12 @@ add deployment.
 
 1. Voila!
 
+## Useful tools
+
+1. Files location 
+
+The `/var/app/current/` directory contains the node files
+
+Following the node log file in real time: `tail -f /var/log/nodejs/nodejs.log`
+
+Find the nodejs executable: `/opt/elasticbeanstalk/node-install/node-v6.2.2-linux-x64/bin`
