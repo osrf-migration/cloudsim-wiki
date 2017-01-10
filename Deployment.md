@@ -247,7 +247,7 @@ add deployment.
 
 1. Voila!
 
-## Useful tools
+## Getting around in a EBS instance (portal, auth, keys...)
 
 The `/var/app/current/` directory contains the node files
 
