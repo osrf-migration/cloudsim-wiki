@@ -19,15 +19,15 @@
 
     a. Bower, the package manager for the browser components
 
-           npm install -g bower
+           sudo npm install -g bower
 
     b. Gulp, the web "make"
 
-           npm install -g gulp
+           sudo npm install -g gulp
 
     c. Polymer
 
-           npm install -g polymer-cli
+           sudo npm install -g polymer-cli
 
 > Note: when installing npm modules, you shouldn't have to be the root user.
 > Npm installs packages locally (in the node_modules directory located besides
