@@ -1,0 +1,1 @@
+This is the OSRF Elastic Beanstalk setup. Your installation may be different.
