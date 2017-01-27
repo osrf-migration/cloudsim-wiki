@@ -4,7 +4,7 @@ This page discusses the OSRF Elastic Beanstalk setup. Your installation may be d
 
 ## Login ##
 
-You can find the relevant ssh keys in the internal wiki. Keep in mind that the cloudsim servers use the cloudsimportal.pem key (in us.east.1 region) while simulator machines are launched in the N. California (us.west.1) region, under a different account (using the cloudsim.pem key)
+You can find the relevant ssh keys in the internal wiki. Keep in mind that the cloudsim servers use the cloudsimportal.pem key (in us.east.1 region) while simulator machines are launched in the N. California (us.west.1) region, under a different account (using various ssh keys, stored in the portal db).
 
 You need to log in the AWS console using the company credentials. Then go to the
 [AWS Elastic Beanstalk](https://console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/applications) to see the running instances.
