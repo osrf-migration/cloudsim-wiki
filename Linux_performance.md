@@ -26,8 +26,22 @@ monitor bandwidth (on device eth0):
 
 Elastic Beanstalk machines run the Amazon Linux distribution (a Fedora like system, with Yum package manager)
 
-https://bitbucket.org/osrf/cloudsim/wiki/Deployment
+### sudo, yum ###
+
+Yum is crippled on Amazon ec2, you are on your own.
+
+### where is the node app? ###
+
+`cd /var/app/current`
+
+### where is the node log? ###
 
 `tail -f /var/log/nodejs/nodejs.log`
 
+### where is the node app? ###
+
 `/opt/elasticbeanstalk/node-install/node-v6.2.2-linux-x64/bin/node`
+
+### where is the redis client? ###
+
+`./redis-2.8.4/src/redis-cli`
