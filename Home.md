@@ -49,6 +49,12 @@
 
     Explains the process of making changes to the server which serves keys to the simulators.
 
+## Operation
+
+1.  [AWS console monitoring](Aws_console_monitoring)
+
+1.  [Linux performance](Linux_performance)
+
 ### Interfaces
 
 * [Resource model](Resource_model): Overview of the resource model shared by all
@@ -82,4 +88,3 @@ The following pages describe the API for each block.
     * [gz-simulatorq](https://osrf.github.io/gz-simulatorq/components/gz-simulatorq/)
 
     * [gz-token](https://osrf.github.io/gz-token/components/gz-token/)
-
