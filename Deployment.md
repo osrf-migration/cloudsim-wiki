@@ -254,3 +254,16 @@ The `/var/app/current/` directory contains the node files
 Following the node log file in real time: `tail -f /var/log/nodejs/nodejs.log`
 
 Find the nodejs executable: `/opt/elasticbeanstalk/node-install/node-v6.2.2-linux-x64/bin`
+
+
+# Database
+
+If you're setting up your own external database server on an EC2 instance, make sure to give it a security group that allows access only from the cloudsim servers.
+
+e.g, the following rule opens the redis-server port to IPs that are local within the VPC:
+
+~~~
+Custom TCP Rule    TCP    6379    172.30.0.0/16
+~~~
+
+Alternatively, you can update the `bind` configuration in the database server's `/etc/redis/redis.conf`  file to only allow the cloudsim servers IPs.
