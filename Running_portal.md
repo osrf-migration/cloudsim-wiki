@@ -52,10 +52,6 @@ You can specify the admin user, which will start with all permissions:
 
 ### Running ###
 
-You must start a mongodb database before running the portal. More
-instructions
-[here](https://bitbucket.org/osrf/cloudsim-portal).
-
 To run the server, simply run:
 
     cd cloudsim-portal
