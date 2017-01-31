@@ -2,7 +2,7 @@
 
 # Running #
 
-To have the whole Cloudsim app running, we need to launch 3 servers:
+To have the whole Cloudsim app running, we need to launch 4 servers:
 
 * Authentication server: [cloudsim-auth](Running_auth)
 * Portal: [cloudsim-portal](Running_portal)
