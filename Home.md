@@ -6,10 +6,11 @@ The DARPA Virtual Robotics Challenge gave birth to the first version of CloudSim
 
 ### Roscon 2016 presentation ###
 
-Watch Ian Chen's presentation *Cloudy with a Chance of Simulation*
+Ian Chen's presentation *Cloudy with a Chance of Simulation*
 
-[Video](https://vimeo.com/187696089)
-[Slides](http://roscon.ros.org/2016/presentations/ROSCon2016_Cloudsim.pdf)
+[Watch the video](https://vimeo.com/187696089)
+
+[Download the slides](http://roscon.ros.org/2016/presentations/ROSCon2016_Cloudsim.pdf)
 
 
 ## Installation
