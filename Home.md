@@ -4,7 +4,9 @@
 
 The DARPA Virtual Robotics Challenge gave birth to the first version of CloudSim. It provided a centralized platform that facilitated teams of participants from around the world to compete in simulation simultaneously. Since then, various projects have demanded the need for a similar cloud hosted environment for robotics competitions. In this presentation, we reveal a new, redesigned CloudSim that aims to be a generic tool for running robotics software and simulations on the cloud. We present some of its key features including simulation instance sharing, reusable front-end web components, a WebGL visualization client, and security and authentication.
 
-### Roscon presentation ###
+### Roscon 2016 presentation ###
+
+Watch Ian Chen's presentation *Cloudy with a Chance of Simulation*
 
 [Video](https://vimeo.com/187696089)
 [Slides](http://roscon.ros.org/2016/presentations/ROSCon2016_Cloudsim.pdf)
