@@ -6,6 +6,19 @@
 
 [[embed url=http://www.youtube.com/watch?v=ZdVpKx6Wmc8]]
 
+## Methodology ##
+
+
+### Has the machine performed better before? 
+
+### USE for every resource:
+
+* Utilization
+* Staturation
+* Errors
+
+Example of resources: CPU, Network devices, Disks... also include busses and interconnects.
+
 ## Bandwidth monitoring using nload ##
 bandwidth monitoring using nload:
 
