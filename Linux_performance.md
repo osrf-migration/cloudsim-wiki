@@ -19,7 +19,7 @@
 
 Example of resources: CPU, Network devices, Disks... also include busses and interconnects.
 
-![linux use method](http://www.brendangregg.com/USEmethod/use-linux.html)
+[linux USE method](http://www.brendangregg.com/USEmethod/use-linux.html)
 
 ## Bandwidth monitoring using nload ##
 bandwidth monitoring using nload:
