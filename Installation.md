@@ -67,12 +67,14 @@ and are useful for production.
 1. Linked packages allow you to use local copies of repositories, and are
 useful for development.
 
-The `link.bash` script links the cloudsim packages:
+The `link.bash` script* links the cloudsim packages:
 
 1. `bower_create_links` and `npm_create_links` make local copies available to
 be used by others.
 1. `bower_use_links` and `npm_use_links` create the symlinks.
 
 Use `clean.bash` and `build.bash` to remove links and install the software. You can then use `link.bash` to add links if you want to edit code.
+
+\* We don't recommend the use of `link.bash`, since most of the time different servers need different dependencies. The recommended approach is to manually link the packages you are currently working on.
 
 [Proceed to Running](Running)
