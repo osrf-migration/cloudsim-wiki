@@ -14,7 +14,7 @@
 1. Install **nodejs** (must be version 4 and up)
 
         curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-        sudo apt install -y nodejs nodejs-legacy npm 
+        sudo apt-get install nodejs 
 
 1. Install global node modules:
 
