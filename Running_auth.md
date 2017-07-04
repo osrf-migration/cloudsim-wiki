@@ -68,7 +68,7 @@ You must provide credentials for your [Auth0](https://auth0.com/) account:
 To run the server, simply run:
 
     cd cloudsim-auth
-    gulp serve
+    npm run dev
 
 By default, the server is launched on port 4000, but since we specified 4001 on
 `.env`, that will be used.
