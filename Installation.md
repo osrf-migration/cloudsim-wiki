@@ -76,6 +76,8 @@ be used by others.
 
 Use `clean.bash` and `build.bash` to remove links and install the software. You can then use `link.bash` to add links if you want to edit code.
 
-\* We don't recommend the use of `link.bash`, since most of the time different servers need different dependencies. The recommended approach is to manually link the packages you are currently working on.
+\* **We don't recommend the use of `link.bash`**, since most of the time different servers need different dependencies. The recommended approach is to manually link the packages you are currently working on. 
+
+Also note that it is not required run `link.bash` manually if after running `setup.bash` you get the `"Not linking repositories, you can run [link.bash] manually."` message. That is an optional step that you should perform only if you know what you are doing.
 
 [Proceed to Running](Running)
