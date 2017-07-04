@@ -6,7 +6,8 @@
 
         sudo apt-get install -y curl mercurial git python-pip redis-server
 
-1. Install **vcs**, a tool to manage multiple repositories
+1. Install **vcs**, a tool to manage multiple repositories 
+> Note: this may fail if you haven't installed ROS yet. Check https://github.com/dirk-thomas/vcstool#how-to-install-vcstool (or install ROS :)).
 
         sudo apt-get install python-vcstool
 
