@@ -63,6 +63,15 @@ You must provide credentials for your [Auth0](https://auth0.com/) account:
 * `AUTH0_CLIENT_SECRET`
 * `AUTH0_DOMAIN`
 
+Clients created after 6th December 2016 no longer have their Client Secret encoded in base64. In the `.env` file, we need to provide the encoded secret. To encode it, use:
+
+    echo your_client_secret | base64
+
+Make sure you include the url of the Auth Server and the Widgets Server in your
+client's allowed callbacks, and that the OAuth's JsonWebToken Signature Algorithm is HS256.
+
+To easily get an ID token, you can install the Auth0 Authentication API Debugger extension in your client. For more details, see the [Authentication API](https://auth0.com/docs/api/authentication#login). This token is used to get a Cloudsim token.
+
 ### Running ###
 
 To run the server, simply run:
