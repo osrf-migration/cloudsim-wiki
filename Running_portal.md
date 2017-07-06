@@ -55,7 +55,7 @@ You can specify the admin user, which will start with all permissions:
 To run the server, simply run:
 
     cd cloudsim-portal
-    npm run dev
+    npm start
 
 By default, the server is launched on port 4000, but since we specified 4002 on
 `.env`, that will be used.
