@@ -63,9 +63,13 @@ You must provide credentials for your [Auth0](https://auth0.com/) account:
 * `AUTH0_CLIENT_SECRET`
 * `AUTH0_DOMAIN`
 
-Clients created after 6th December 2016 no longer have their Client Secret encoded in base64. In the `.env` file, we need to provide the encoded secret. To encode it, use:
+Clients created after 6th December 2016 no longer have their Client Secret encoded in base64. In the `.env` file, we need to provide the encoded secret. For example, if our secret is "v2TL3HpNwD38ryKmVW" then we need to do the following:
 
-    echo your_client_secret | base64
+    echo v2TL3HpNwD38ryKmVW | base64
+
+The result is the encoded string: "djJUTDNIcE53RDM4cnlLbVZXCg==", so in the `.env` file, we include:
+
+    AUTH0_CLIENT_SECRET=djJUTDNIcE53RDM4cnlLbVZXCg==
 
 Make sure you include the url of the Auth Server and the Widgets Server in your
 client's allowed callbacks, and that the OAuth's JsonWebToken Signature Algorithm is HS256.
