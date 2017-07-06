@@ -55,14 +55,19 @@ to get the sources and create links across projects.
     with bitbucket and github**.
     1. The `build.bash` script goes into each project and invokes `npm install` and `bower install`
 
+Note that it is not required run `link.bash` manually if after running `setup.bash` you get the `Not linking repositories, you can run [link.bash] manually.` message. That is an optional step that you should perform only if you know what you are doing.
+
+
 ### Projects and links explained ###
+
+**Important:** the description below is mainly for information purposes and should be only required under very specific development circumsatances.
 
 Cloudsim uses 2 javascript package managers: `npm` for server side components and
 servers, and `bower` for client side web components.
 
 Packages can either be installed or linked:
 
-1. Installled packages are downloaded and installed from versioned tar balls,
+1. Installed packages are downloaded and installed from versioned tar balls,
 and are useful for production.
 
 1. Linked packages allow you to use local copies of repositories, and are
@@ -76,8 +81,7 @@ be used by others.
 
 Use `clean.bash` and `build.bash` to remove links and install the software. You can then use `link.bash` to add links if you want to edit code.
 
-\* **We don't recommend the use of `link.bash`**, since most of the time different servers need different dependencies. The recommended approach is to manually link the packages you are currently working on. 
+\* **We don't recommend the use of `link.bash`**, since most of the time different servers need different dependencies. The recommended approach is to manually link the packages you are currently working on (e.g. if you need to work on cloudsim-grant, run `npm link cloudsim-grant`). 
 
-Also note that it is not required run `link.bash` manually if after running `setup.bash` you get the `"Not linking repositories, you can run [link.bash] manually."` message. That is an optional step that you should perform only if you know what you are doing.
 
 [Proceed to Running](Running)
