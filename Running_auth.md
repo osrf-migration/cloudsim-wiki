@@ -63,7 +63,11 @@ You must provide credentials for your [Auth0](https://auth0.com/) account:
 * `AUTH0_CLIENT_SECRET`
 * `AUTH0_DOMAIN`
 
-Clients created after 6th December 2016 no longer have their Client Secret encoded in base64. In the `.env` file, we need to provide the encoded secret. For example, if our secret is "v2TL3HpNwD38ryKmVW" then we need to do the following:
+Clients created after 6th December 2016 no longer have their Client Secret encoded in base64. Auth0 will let you know whether the secret is encoded or not:
+
+![Capture 2017-07-07_10-12-6_am.png](https://bitbucket.org/repo/eaE4bR/images/1833695783-Capture%202017-07-07_10-12-6_am.png)
+
+In the `.env` file, we need to provide the **base64 encoded** secret. For example, if our secret is "v2TL3HpNwD38ryKmVW" then we need to do the following:
 
     echo v2TL3HpNwD38ryKmVW | base64
 
