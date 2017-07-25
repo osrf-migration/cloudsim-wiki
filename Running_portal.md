@@ -50,6 +50,15 @@ You can specify the admin user, which will start with all permissions:
 
 * `CLOUDSIM_ADMIN`
 
+
+#### Keys URL
+
+Cloudsim-portal needs to know where the keys server is located. the `.env` file will
+need to define this:
+
+    CLOUDSIM_KEYS_URL=http://localhost:4003
+
+
 ### Running ###
 
 To run the server, simply run:
